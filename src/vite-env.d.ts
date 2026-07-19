@@ -1,10 +1,11 @@
 /// <reference types="vite/client" />
 
-interface Window {
-  designxDesktop?: {
-    platform: string;
-    versions: {
-      electron: string;
-    };
-  };
+import type { DesignXDesktopApi } from './shared/contracts';
+
+export {};
+
+declare global {
+  interface Window {
+    designx?: DesignXDesktopApi;
+  }
 }

@@ -7,13 +7,14 @@
 
 # testing
 /coverage
+/test-results
+/playwright-report
 
 # next.js
 /.next/
 /out/
 
 # production
-/build
 /dist
 /release
 

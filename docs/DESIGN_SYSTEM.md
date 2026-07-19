@@ -2,9 +2,9 @@
 
 ## 设计基准
 
-- 主分析页：`docs/concepts/designx-new-analysis.png`（1440 × 900）
-- 发现详情：`docs/concepts/designx-findings.png`（1440 × 900）
-- 知识发布：`docs/concepts/designx-knowledge.png`（1440 × 900）
+- 主分析页：`docs/concepts/designx-new-analysis.png`（1586 × 992）
+- 发现详情：`docs/concepts/designx-findings.png`（1586 × 992）
+- 知识发布：`docs/concepts/designx-knowledge.png`（1586 × 992）
 
 三张概念图共同构成实现规范。未展示的代码仓与分析任务页沿用相同的表格、工具栏和弹窗组件族，不引入新的容器模型。
 
@@ -121,4 +121,4 @@
 5. 在发现页并列查看代码证据与知识证据，确认后填写原因并忽略。
 6. 在设置弹窗修改本地工作区和企业模型配置。
 
-状态使用带版本号的 `localStorage` 快照模拟本地持久化；Electron 渲染进程不直接访问 Node.js、文件系统或凭据。
+状态来自 Main 进程加载的工作区快照与任务/仓库事件；正式模式不使用示例数据或 `localStorage`。Electron 渲染进程不直接访问 Node.js、文件系统或凭据。

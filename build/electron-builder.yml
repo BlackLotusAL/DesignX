@@ -1,0 +1,30 @@
+appId: com.designx.workbench
+productName: DesignX
+electronDist: node_modules/electron/dist
+directories:
+  output: release
+files:
+  - out/**/*
+  - package.json
+asar: true
+asarUnpack:
+  - node_modules/pdfjs-dist/**/*
+win:
+  icon: build/icon.png
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  legalTrademarks: DesignX
+nsis:
+  artifactName: ${productName}-Setup-${version}-${arch}.${ext}
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: DesignX
+portable:
+  artifactName: ${productName}-Portable-${version}-${arch}.${ext}
