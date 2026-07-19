@@ -1,0 +1,42 @@
+:root {
+  color-scheme: light;
+  font-family:
+    'Segoe UI Variable', 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei',
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+
+  --white: #ffffff;
+  --sidebar: #eef2f6;
+  --sidebar-selected: #dfe7f2;
+  --sidebar-hover: #e7ecf2;
+  --text: #15171b;
+  --text-secondary: #667085;
+  --text-tertiary: #8a94a3;
+  --border: #d9e0e8;
+  --border-soft: #e8edf2;
+  --surface-subtle: #f7f9fb;
+  --surface-selected: #f0f5ff;
+  --accent: #1749b8;
+  --accent-hover: #123d9c;
+  --accent-soft: #eaf1ff;
+  --running: #1769d2;
+  --success: #168a46;
+  --success-soft: #edf8f1;
+  --warning: #d97706;
+  --warning-soft: #fff7e8;
+  --danger: #d92d20;
+  --danger-soft: #fff2f0;
+  --code: #171a20;
+  --code-muted: #8d96a6;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --shadow-composer:
+    0 12px 34px rgba(18, 31, 54, 0.1), 0 2px 8px rgba(18, 31, 54, 0.05);
+  --shadow-modal:
+    0 26px 70px rgba(15, 23, 42, 0.18), 0 4px 16px rgba(15, 23, 42, 0.09);
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+}
