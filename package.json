@@ -1,6 +1,6 @@
 {
   "name": "designx",
-  "version": "1.0.0",
+  "version": "1.0.0-rc.1",
   "description": "面向系统设计人员和模块负责人的本地研发治理工作台",
   "author": "DesignX",
   "private": true,

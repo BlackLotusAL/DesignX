@@ -1,13 +1,21 @@
-import { mkdtemp, rm, stat } from 'node:fs/promises';
+import { mkdtemp, readFile, rm, stat } from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { clearTimeout, setTimeout } from 'node:timers';
 import { _electron as electron } from '@playwright/test';
 
+const packageMetadata = JSON.parse(
+  await readFile(resolve('package.json'), 'utf8'),
+);
+const { version } = packageMetadata;
+if (typeof version !== 'string' || version.length === 0) {
+  throw new Error('Package version is missing');
+}
+
 const artifacts = [
-  resolve('release/DesignX-Setup-1.0.0-x64.exe'),
-  resolve('release/DesignX-Portable-1.0.0-x64.exe'),
+  resolve(`release/DesignX-Setup-${version}-x64.exe`),
+  resolve(`release/DesignX-Portable-${version}-x64.exe`),
   resolve('release/win-unpacked/DesignX.exe'),
 ];
 
